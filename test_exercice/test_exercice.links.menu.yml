@@ -1,0 +1,10 @@
+entity.time_entry.settings:
+  title: TimeEntry
+  description: Configure a TimeEntry entity type
+  route_name:  entity.time_entry.settings
+  parent: system.admin_structure
+entity.time_entry.collection:
+  title: TimeEntries
+  description: List of timeentries
+  route_name: entity.time_entry.collection
+  parent: system.admin_content

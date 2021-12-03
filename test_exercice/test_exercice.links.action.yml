@@ -1,0 +1,5 @@
+time_entry.add_form:
+  route_name: entity.time_entry.add_form
+  title: 'Add timeEntry'
+  appears_on:
+    - entity.time_entry.collection

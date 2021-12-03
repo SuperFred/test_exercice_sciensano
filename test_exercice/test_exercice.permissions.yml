@@ -1,0 +1,13 @@
+administer timeEntry:
+  title: 'Administer timeEntry settings'
+  restrict access: true
+access timeEntry overview:
+  title: 'Access timeEntry overview page'
+delete timeEntry:
+  title: Delete timeEntry
+create timeEntry:
+  title: Create timeEntry
+view timeEntry:
+  title: View timeEntry
+edit timeEntry:
+  title: Edit timeEntry

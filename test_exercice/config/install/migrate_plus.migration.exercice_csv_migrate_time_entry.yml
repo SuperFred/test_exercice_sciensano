@@ -1,0 +1,15 @@
+id: exercice_csv_migrate_time_entry
+label: CSV Migrate example time Entry
+migration_tags:
+  - Exercice Migrate CSV
+source:
+  plugin: csv
+  path: modules/custom/test_exercice/sources/csv_migrate_items.csv
+  ids :
+    - id
+process:
+  teid: id
+  title: Title
+  time: Time
+destination:
+  plugin: entity:time_entry

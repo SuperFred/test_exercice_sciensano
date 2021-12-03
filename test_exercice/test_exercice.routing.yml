@@ -1,0 +1,7 @@
+entity.time_entry.settings:
+  path: 'admin/structure/time-entry'
+  defaults:
+    _form: '\Drupal\test_exercice\Form\TimeEntrySettingsForm'
+    _title: 'TimeEntry'
+  requirements:
+    _permission: 'administer timeEntry'

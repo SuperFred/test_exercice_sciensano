@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\migrate\MigrateExecutable;
+use Drupal\migrate\MigrateMessage;
+use Drupal\migrate\Plugin\MigrationInterface;
+
+/**
+ * Implements hook_install().
+ * On install run the migration
+ */
+function test_exercice_install($is_syncing)
+{
+    $manager = Drupal::service('plugin.manager.migration');
+    $migrationId = 'exercice_csv_migrate_time_entry';
+    $migration = $manager->createInstance($migrationId);
+    // update existing entity imported.
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+
+    try {
+        // Run the migration.
+        $executable->import();
+    }
+    catch (\Exception $e) {
+        $migration->setStatus(MigrationInterface::STATUS_IDLE);
+    }
+
+}
